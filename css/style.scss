@@ -1,0 +1,310 @@
+@import 'other';
+
+$cl :#145855;
+
+#app{
+
+    mark{
+        color: $cl;
+        font-weight: 500;
+        background: transparent;
+        box-shadow: 0 2.5px 0 $cl;
+    }
+
+    nav{
+        position: fixed;
+        padding: 5vh 5vw;
+        top: 0;
+        left:0;
+        min-height: 50px;
+        width: 100vw;
+        @include flexbox(space-between);
+        span{
+            @include flexbox;
+            &:last-child img{
+                margin: 0 10px;
+                height: 20px;
+                width: 20px;
+                cursor: pointer;
+            }
+        }
+        ul{
+            @include flexbox;
+            li{
+                padding: 0 5px;
+                margin: 0 20px;
+                transition: 0.5s;
+                a{
+                    width: 100%;
+                }
+                &:hover,&.active{
+                    a{
+                        color: $cl;
+                        font-weight: 600;
+                    }
+                    box-shadow: 0 2px 0 $cl;
+                }
+            }
+        }
+    }
+
+    // header
+    .head{
+        padding: 5vh 5vw;
+        min-height: 100vh;
+        @include flexbox(space-between);
+        background: $mc;
+        &_text{
+            min-width: 35vw;
+            h2{
+                margin: 10px 0;
+                font-size: 3em;
+            }
+
+            span{
+                @include flexbox(flex-start);
+                a{
+                    margin: 0 10px;
+                    font-size: 1.2em;
+                    padding: 5px 15px;
+                    &:first-child{
+                        font-weight: 500;
+                        color: $cl;
+                        border-radius: 20px;
+                        box-shadow: 0 0 0 2.5px $cl;
+                    }
+                }
+            }
+        }
+        img{
+            align-self: flex-end;
+            width: 100%;
+        }
+    }
+
+    // section one
+    .sec1{
+        position: relative;
+        min-height: 100vh;
+        padding: 5vh 5vw;
+        min-height: 100vh;
+        @include flexbox(space-around);
+        &-bx{
+            min-width: 300px;
+            height: 400px;
+            border-radius: 20px;
+            background: #eaebed;
+        }
+        &-text{
+            h2{
+                font-size: 3em;
+            }
+            p{
+                margin: 20px 0;
+                color: #00000080;
+            }
+            a{
+                padding: 5px 10px;
+                font-weight: 500;
+                color: $cl;
+                border-radius: 20px;
+                box-shadow: 0 0 0 2.5px $cl;
+            }
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            right: 0;
+            bottom: 0;
+            height: 350px;
+            width: 130px;
+            background: url(./img/sec1-img.png) center/contain no-repeat;
+        }
+    }
+
+    // section two
+    .sec2{
+        position: relative;
+        min-height: 100vh;
+        padding: 5vh 5vw;
+        min-height: 100vh;
+        @include flexbox(space-around);
+        &-bx{
+            min-width: 300px;
+            height: 400px;
+            border-radius: 20px;
+            background: #eaebed;
+        }
+        &-text{
+            h2{
+                font-size: 3em;
+            }
+            p{
+                margin: 20px 0;
+                color: #00000080;
+            }
+            a{
+                padding: 5px 10px;
+                font-weight: 500;
+                color: $cl;
+                border-radius: 20px;
+                box-shadow: 0 0 0 2.5px $cl;
+            }
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            height: 350px;
+            width: 130px;
+            background: url(./img/sec2-img.png) center/contain no-repeat;
+        }
+    }
+
+    // section three
+    .sec3{
+        min-height: 100vh;
+        padding: 5vh 5vw;
+        min-height: 100vh;
+        @include flexbox;
+        flex-direction: column;
+        background: $mc;
+        h2{
+            font-size: 3em;
+            align-self: flex-start;
+        }
+        ul{
+            margin: 20px 0;
+            width: 100%;
+            @include flexbox(flex-start);
+            li{
+                padding: 0 5px;
+                margin: 0 20px;
+                transition: 0.5s;
+                &:hover,&.active{
+                    a{
+                        color: $cl;
+                        font-weight: 600;
+                    }
+                    &:not(:last-child){
+                        box-shadow: 0 2px 0 $cl;
+                    }
+                }
+                &:last-child{
+                    justify-self: flex-end;
+                    @include flexbox;
+                    h3{
+                        margin: 0 5px;
+                        height: 30px;
+                        width: 30px;
+                        @include flexbox;
+                        background: $mc;
+                    }
+                }
+            }
+        }
+        &-cards{
+            width: 100%;
+            @include flexbox(space-around);
+            .card{
+                @include flexbox;
+                flex-direction: column;
+                .bx{
+                    margin: 10px 0;
+                    height: 300px;
+                    width: 250px;
+                    background: #eaebed;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+
+    // section four
+    .sec4{
+        position: relative;
+        min-height: 100vh;
+        padding: 5vh 5vw;
+        min-height: 100vh;
+        @include flexbox(space-around);
+        &-bx{
+            min-width: 300px;
+            height: 400px;
+            border-radius: 20px;
+            background: #eaebed;
+        }
+        &-text{
+            h2{
+                font-size: 3em;
+            }
+            a{
+                padding: 5px 10px;
+                font-weight: 500;
+                color: $cl;
+                border-radius: 20px;
+                box-shadow: 0 0 0 2.5px $cl;
+            }
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            height: 350px;
+            width: 130px;
+            background: url(./img/sec2-img.png) center/contain no-repeat;
+        }
+    }
+
+    // footer
+    footer{
+        position: relative;
+        padding: 5vh 5vw;
+        background: $mc;
+        @include flexbox;
+        ul{
+            width: 100%;
+            @include flexbox(space-around);
+            li{
+                @include flexbox(center,flex-start);
+                flex-direction: column;
+                a,p{
+                    margin-top: 10px;
+                    color: #00000080;
+                }
+                &:first-child{
+                    span{
+                        @include flexbox;
+                        img{
+                            margin-right: 5px;
+                        }
+                        a{
+                            height: 50px;
+                            width: 50px;
+                            @include flexbox;
+                            color: #000;
+                            background: #fff;
+                            border-radius: 50%;
+                            font-size: 1.5em;
+                            &:not(:first-child){
+                                margin-left: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &::before{
+            position: absolute;
+            content: '';
+            right: 0;
+            bottom: 0;
+            height: 130px;
+            width: 150px;
+            background: url(./img/footer-img.png) center/contain no-repeat;
+        }
+    }
+}
+
+@import 'media';
